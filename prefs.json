@@ -1,0 +1,4 @@
+{
+  "dbUrl": "jdbc:h2:./SQL/HW_15_DB",
+  "username": "sa"
+}
