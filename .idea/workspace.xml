@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87d30ff1-ae0f-475d-a4d8-1f73a64d0f8f" name="Changes" comment="Initial commit" />
+    <list default="true" id="87d30ff1-ae0f-475d-a4d8-1f73a64d0f8f" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/HW_15_DB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/HW_15_DB.mv.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +143,7 @@
       <workItem from="1654790175459" duration="2769000" />
       <workItem from="1654855321869" duration="7012000" />
       <workItem from="1654881276747" duration="924000" />
-      <workItem from="1654882277893" duration="31000" />
+      <workItem from="1654882277893" duration="1718000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1654534716094</created>
