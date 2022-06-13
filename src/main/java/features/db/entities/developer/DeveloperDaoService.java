@@ -2,6 +2,7 @@ package features.db.entities.developer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DeveloperDaoService {
@@ -35,10 +36,21 @@ public class DeveloperDaoService {
         createSt.executeUpdate();
     }
 
-    public void getById(long id) throws SQLException {
+    public Developer getById(long id) throws SQLException {
         getByIdSt.setLong(1, id);
 
-        getByIdSt.executeUpdate();
+        ResultSet resultSet = getByIdSt.executeQuery();
+        Developer developer = new Developer();
+
+        while (resultSet.next()) {
+            developer.setFirstName(resultSet.getString("first_name"));
+            developer.setLastName(resultSet.getString("last_name"));
+            developer.setAge(resultSet.getInt("age"));
+            developer.setGender(resultSet.getString("gender"));
+            developer.setSalary(resultSet.getDouble("salary"));
+        }
+
+        return developer;
     }
 
     public void updateById(

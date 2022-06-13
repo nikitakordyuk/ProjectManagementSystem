@@ -2,6 +2,7 @@ package features.db.entities.company;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CompanyDaoService {
@@ -28,10 +29,18 @@ public class CompanyDaoService {
         createSt.executeUpdate();
     }
 
-    public void getById(long id) throws SQLException {
+    public Company getById(long id) throws SQLException {
         getByIdSt.setLong(1, id);
 
-        getByIdSt.executeUpdate();
+        ResultSet resultSet = getByIdSt.executeQuery();
+        Company company = new Company();
+
+        while (resultSet.next()) {
+            company.setName(resultSet.getString("company_name"));
+            company.setFamous(resultSet.getBoolean("is_famous"));
+        }
+
+        return company;
     }
 
     public void updateById(String name, boolean isFamous, long id) throws SQLException {

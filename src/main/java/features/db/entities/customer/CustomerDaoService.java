@@ -1,7 +1,10 @@
 package features.db.entities.customer;
 
+import features.db.entities.company.Company;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CustomerDaoService {
@@ -28,10 +31,18 @@ public class CustomerDaoService {
         createSt.executeUpdate();
     }
 
-    public void getById(long id) throws SQLException {
+    public Customer getById(long id) throws SQLException {
         getByIdSt.setLong(1, id);
 
-        getByIdSt.executeUpdate();
+        ResultSet resultSet = getByIdSt.executeQuery();
+        Customer customer = new Customer();
+
+        while (resultSet.next()) {
+            customer.setFirstName(resultSet.getString("first_name"));
+            customer.setLastName(resultSet.getString("last_name"));
+        }
+
+        return customer;
     }
 
     public void updateById(String firstName, String lastName, long id) throws SQLException {

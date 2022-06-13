@@ -1,7 +1,10 @@
 package features.db.entities.skill;
 
+import features.db.entities.project.Project;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SkillDaoService {
@@ -31,10 +34,19 @@ public class SkillDaoService {
         createSt.executeUpdate();
     }
 
-    public void getById(long id) throws SQLException {
+    public Skill getById(long id) throws SQLException {
         getByIdSt.setLong(1, id);
 
-        getByIdSt.executeUpdate();
+        ResultSet resultSet = getByIdSt.executeQuery();
+        Skill skill = new Skill();
+
+        while (resultSet.next()) {
+            skill.setLanguageName(resultSet.getString("language_name"));
+            skill.setSkillLevel(resultSet.getString("skill_level"));
+
+        }
+
+        return skill;
     }
 
     public void updateById(String language_name, String skill_level, long id) throws SQLException {

@@ -1,9 +1,8 @@
 package features.db.entities.project;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import features.db.entities.developer.Developer;
+
+import java.sql.*;
 import java.time.LocalDate;
 
 public class ProjectDaoService {
@@ -37,10 +36,20 @@ public class ProjectDaoService {
         createSt.executeUpdate();
     }
 
-    public void getById(long id) throws SQLException {
+    public Project getById(long id) throws SQLException {
         getByIdSt.setLong(1, id);
 
-        getByIdSt.executeUpdate();
+        ResultSet resultSet = getByIdSt.executeQuery();
+        Project project = new Project();
+
+        while (resultSet.next()) {
+            project.setName(resultSet.getString("project_name"));
+            project.setComplexity(resultSet.getInt("complexity"));
+            project.setCost(resultSet.getDouble("cost"));
+            project.setDateOfCreation(resultSet.getDate("date_of_creation").toLocalDate());
+        }
+
+        return project;
     }
 
     public void updateById(

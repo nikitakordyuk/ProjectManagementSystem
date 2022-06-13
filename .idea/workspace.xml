@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87d30ff1-ae0f-475d-a4d8-1f73a64d0f8f" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="87d30ff1-ae0f-475d-a4d8-1f73a64d0f8f" name="Changes" comment="Fixed database path">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a447260-ede1-4b68-8df4-b80a5dbd7284.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a447260-ede1-4b68-8df4-b80a5dbd7284.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL/HW_15_DB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/HW_15_DB.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/HW_15_DB.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/HW_15_DB.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/db/entities/company/CompanyDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/db/entities/company/CompanyDaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/db/entities/customer/CustomerDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/db/entities/customer/CustomerDaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/db/entities/developer/DeveloperDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/db/entities/developer/DeveloperDaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/db/entities/project/ProjectDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/db/entities/project/ProjectDaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/db/entities/skill/SkillDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/db/entities/skill/SkillDaoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +149,10 @@
       <workItem from="1654790175459" duration="2769000" />
       <workItem from="1654855321869" duration="7012000" />
       <workItem from="1654881276747" duration="924000" />
-      <workItem from="1654882277893" duration="1718000" />
+      <workItem from="1654882277893" duration="2040000" />
+      <workItem from="1654942495885" duration="125000" />
+      <workItem from="1655139873663" duration="644000" />
+      <workItem from="1655145600261" duration="1486000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1654534716094</created>
@@ -201,6 +210,7 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Fixed database path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed database path" />
   </component>
 </project>
